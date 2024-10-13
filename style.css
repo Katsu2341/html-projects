@@ -1,0 +1,173 @@
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+*{
+    background-color: black;
+    color: white;
+}
+div{
+    display: inline-block;
+    text-align: center;
+    margin-left: 40px;
+}
+h1{
+    text-align: center;
+}
+h1:hover{
+    color: red;
+}
+h2{
+    text-align: center;
+}
+h2:hover{
+    color: red;
+}
+h3{
+    text-align: center;
+}
+h3:hover{
+    color: red;
+}
+p{
+    text-align: center;
+}
+.c1:hover{
+    content: url(img1/Alliance.png);
+    height: 200px;
+    width: 200px;
+}
+.c2:hover{
+    content: url(img1/apex.png);
+    height: 200px;
+    width: 200px;
+}
+.c3:hover{
+    content: url(img1/AVULUS.png);
+    height: 200px;
+    width: 200px;
+}
+.c4:hover{
+    content: url(img1/B8.png);
+    height: 200px;
+    width: 200px;
+}
+.c5:hover{
+    content: url(img1/beastcoast.png);
+    height: 200px;
+    width: 200px;
+}
+.c6:hover{
+    content: url(img1/Cloud9.png);
+    height: 200px;
+    width: 200px;
+}
+.c7:hover{
+    content: url(img1/fart.png);
+    height: 200px;
+    width: 200px;
+}
+.c8:hover{
+    content: url(img1/Gaimin\ Gladiators.png);
+    height: 200px;
+    width: 200px;
+}
+.c9:hover{
+    content: url(img1/HEROIC.png);
+    height: 200px;
+    width: 200px;
+}
+.c10:hover{
+    content: url(img1/Infamous.png);
+    height: 200px;
+    width: 200px;
+}
+.c11:hover{
+    content: url(img1/Infinity.png);
+    height: 200px;
+    width: 200px;
+}
+.c12:hover{
+    content: url(img1/Lava\ Esports.png);
+    height: 200px;
+    width: 200px;
+}
+.c13:hover{
+    content: url(img1/MOUZ.webp);
+    height: 200px;
+    width: 200px;
+}
+.c14:hover{
+    content: url(img1/NAVI\ Junior.png);
+    height: 200px;
+    width: 200px;
+}
+.c15:hover{
+    content: url(img1/nouns.png);
+    height: 200px;
+    width: 200px;
+}
+.c16:hover{
+    content: url(img1/OG.png);
+    height: 200px;
+    width: 200px;
+}
+.c17:hover{
+    content: url(img1/Pacific\ Esports.png);
+    height: 200px;
+    width: 200px;
+}
+.c18:hover{
+    content: url(img1/Palianytsia.png);
+    height: 200px;
+    width: 200px;
+}
+.c19:hover{
+    content: url(img1/Qhali.png);
+    height: 200px;
+    width: 200px;
+}
+.c20:hover{
+    content: url(img1/Shopify\ Rebellion.png);
+    height: 200px;
+    width: 200px;
+}
+.c21:hover{
+    content: url(img1/Team\ Liquid.png);
+    height: 200px;
+    width: 200px;
+}
+.c22:hover{
+    content: url(img1/Team\ Secret.png);
+    height: 200px;
+    width: 200px;
+}
+.c23:hover{
+    content: url(img1/Tundra\ Esports.png);
+    height: 200px;
+    width: 200px;
+}
+.c24:hover{
+    content: url(img1/Palianytsia.png);
+    height: 200px;
+    width: 200px;
+}
+.c25:hover{
+    content: url(img1/team-spirit.png);
+    height: 200px;
+    width: 200px;
+}
+*{
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+.p1{
+    border: 1px solid red;
+}
+ol{
+    font-size: 25px;
+}
+
