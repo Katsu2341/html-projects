@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.background{
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(img1/back.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed ;
+    background-repeat:no-repeat ;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    z-index: 100;
+}
+.logo{
+        font-size: 30px;
+        color: white;
+        font-weight: 600;
+        transition: 0.3s;
+}
+.logo:hover{
+    color: rgb(255, 38, 0);
+    text-shadow: 0 0 25px rgb(255, 8, 0),
+                 0 0 50px  rgb(255, 17, 0);
+    transform: scale(1.1);
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: rgb(255, 38, 0);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;   
+}
+.content q{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.inner{
+    padding-top: 50%;
+}
+.header{
+    text-align: center;
+    color:rgb(255, 38, 0) ;
+    padding: 1rem;
+    position: relative;
+}
+.header::after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1rem;
+    
+}
+.skillbox{
+    padding: 1rem;
+    color: white; 
+    cursor: pointer;
+    border: white solid;
+    border-radius: 5px;
+    gap: 5px;
+}
+.skillbox:hover > .skilltitle:after, .skillbox:hover > .skilltitle:before{
+    width: 35px;
+}
+.skillbox:hover .img{
+    transform: translateY(-10px);
+
+}
+.skilltitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.skilltitle:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: white;
+    transition: .5s;
+}
+.skilltitle:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: white;    
+    transition: .5s;
+}
+.img{
+    width: 90px;
+    height: 90px;
+    position:relative;
+    border-radius: 45px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background-color: black;
+    border-radius: 45px 0 0 45px;
+}
+.skilltitle h3{
+    color: rgb(255, 38, 0);
+    margin-top: 0.5rem;
+
+}
+.skillicon{
+    width: 50px;
+    z-index: 2;
+}
+@media screen and (max-width: 900px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+        
+    }
+}
+@media screen and (max-width: 650px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgb(255, 38, 0);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display:inline-block ;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px rgb(255, 38, 0), 0 0 10px rgb(255, 38, 0);
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    color: rgb(255, 38, 0);
+    border: 2px solid rgb(255, 38, 0);
+
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid rgb(255, 38, 0);
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+</style>
+<body>
+    <div class="background"> 
+               <div class="navbar">
+                <a href="#" class="logo">DO2TEAM</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="american.html">American</a></li>
+                        <li><a href="China.html">China</a></li>
+                        <li><a href="Europe.html">Europe</a></li>
+                        <li><a href="Southeast Asia.html">Southeast A</a></li>
+                        <li><a href="Player.html"></a></li>
+                    </ul>
+               </div>
+               <div class="content">
+                <h1 class="h1">China</h1>
+                    <q>China has long been one of the most dominant regions in the Dota 2 competitive scene,
+                         producing many top-tier teams and players. Chinese teams have consistently been strong contenders at The International (TI) and other major tournaments.China remains one of the most competitive and successful regions in the Dota 2 world. 
+                         Teams like PSG.LGD, Vici Gaming, and Team Aster are among the best in the world, regularly qualifying for The International and finishing near the top. 
+                         Players from China are known for their excellent understanding of the game, strategic play, and exceptional teamwork, making the region a powerhouse in the Dota 2 scene. </q>
+
+                         <q>In addition to these teams, many top Dota 2 players from the region also occasionally form smaller squads or shift between organizations depending on team dynamics and roster changes. 
+                            If you’re looking for the latest teams or changes in the Dota 2 landscape, you can always check the latest DPC (Dota Pro Circuit) standings or follow major tournaments for updates on rosters and results.</q>
+                    </div> 
+                        <div class="inner">
+                            <div class="header">
+                                <h1>Teams</h1>
+                            </div>
+                                <div class="container">
+                                    <div class="skillbox">
+                                        <div class="skilltitle">
+                                            <div class="img">
+                                                <img src="img1/lgd.png" alt="apex" class="skillicon">
+                                            </div>
+                                                <h3>LGD Gaming</h3>
+                                        </div>
+                                         <p>LGD Gaming (LGD) is a prominent Chinese esports organization, particularly known for its success in Dota 2. 
+                                            The team has been one of the top contenders in the competitive Dota 2 scene, frequently competing at the highest levels, including The International (TI), the most prestigious tournament in the Dota 2 competitive calendar.</p>
+                                    </div>
+                                    <div class="skillbox">
+                                        <div class="skilltitle">
+                                            <div class="img">
+                                                <img src="img1/bright.png" alt="apex" class="skillicon">
+                                            </div>
+                                                <h3> Team Bright</h3>
+                                        </div>
+                                         <p>Team Bright is a relatively new and lesser-known team in the Dota 2 competitive scene. As of 2023 and early 2024, they don't have the same level of recognition or history as other established teams like PSG.LGD, 
+                                            Evil Geniuses, or Team Secret. The name "Team Bright" may refer to a specific team or roster, and it is possible that they are in the early stages of building a reputation or playing in regional competitions.</p>
+                                    </div>  
+                                    <div class="skillbox">
+                                        <div class="skilltitle">
+                                            <div class="img">
+                                                <img src="img1/Extream.png" alt="apex" class="skillicon">
+                                            </div>
+                                                <h3>Xtreme Gaming</h3>
+                                        </div>
+                                         <p>Xtreme Gaming is a professional Chinese Dota 2 team that has gained some attention in the competitive scene.
+                                             While not as globally renowned as some of the other top-tier Chinese teams like PSG.LGD, Vici Gaming, or Team Aster, Xtreme Gaming has been a rising force in the Dota 2 landscape, particularly in the Chinese region.</p>
+                                    </div>  
+                                    <div class="skillbox">
+                                        <div class="skilltitle">
+                                            <div class="img">
+                                                <img src="img1/Aster.Aries.png" alt="apex" class="skillicon">
+                                            </div>
+                                                <h3>Aster.Aries</h3>
+                                        </div>
+                                         <p>Aster.Aries is a Chinese professional Dota 2 team that is part of Team Aster, one of the top Dota 2 organizations in China. 
+                                            While Team Aster itself is a well-established organization with a high-level roster, Aster.Aries represents a secondary or developmental squad often composed of emerging or lesser-known players.</p>
+                                    </div>
+                                    <div class="skillbox">
+                                        <div class="skilltitle">
+                                            <div class="img">
+                                                <img src="img1/Avalon Gaming.png" alt="apex" class="skillicon">
+                                            </div>
+                                                <h3> Avalon Gaming</h3>
+                                        </div>
+                                         <p>Avalon Gaming is a Dota 2 esports organization that has been relatively low-profile compared to some of the larger, more established organizations in the competitive Dota 2 scene. 
+                                            Avalon Gaming has been involved in various regional tournaments, often featuring a mix of rising talent and experienced players.</p>
+                                    </div>
+                                <div class="skillbox">
+                                    <div class="skilltitle">
+                                        <div class="img">
+                                            <img src="img1/Azure Ray.png" alt="apex" class="skillicon">
+                                        </div>
+                                            <h3>Azure Ray</h3>
+                                    </div>
+                                     <p>Azure Ray is a Dota 2 esports organization, primarily known within the Chinese Dota 2 scene.
+                                         It has gained attention for featuring a roster of talented players, some of whom have been notable figures within the competitive Dota 2 community</p>
+                                </div>
+                                <div class="skillbox">
+                                    <div class="skilltitle">
+                                        <div class="img">
+                                            <img src="img1/Big God.png" alt="apex" class="skillicon">
+                                        </div>
+                                            <h3> Big God</h3>
+                                    </div>
+                                     <p>Big God was a well-known Chinese Dota 2 esports team, primarily recognized for its talented roster and significant impact in the early years of competitive Dota 2. 
+                                        The team made a name for itself by being part of the competitive Dota scene during the 2014-2015 period, and they were especially noted for their performances in The International (TI) qualifiers and other major tournaments.</p>
+                                </div>
+                                <div class="skillbox">
+                                    <div class="skilltitle">
+                                        <div class="img">
+                                            <img src="img1/Blaze.png" alt="apex" class="skillicon">
+                                        </div>
+                                            <h3> Blaze</h3>
+                                    </div>
+                                     <p>Blaze is a Dota 2 esports team, but it is relatively lesser-known compared to the larger, more established teams in the competitive Dota 2 scene. As with many smaller or emerging teams, 
+                                        Blaze has been involved in regional tournaments and has competed in qualifiers for international events, 
+                                        but it has not yet achieved the same level of recognition or consistent success as some of the premier teams in the Dota 2 ecosystem.</p>
+                                </div>
+                                <div class="skillbox">
+                                    <div class="skilltitle">
+                                        <div class="img">
+                                            <img src="img1/DeathBringer Gaming.png" alt="apex" class="skillicon">
+                                        </div>
+                                            <h3> DeathBringer Gaming</h3>
+                                    </div>
+                                     <p>DeathBringer Gaming (often abbreviated as DBG) is a Dota 2 esports organization that has been active in the competitive scene,
+                                         but like many smaller teams, it has not been as widely recognized as top-tier teams like PSG.LGD, Team Secret, or Virtus.pro. However, 
+                                         DeathBringer Gaming has made its mark, particularly in regional competitions and online qualifiers for Dota 2 tournaments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="footer">
+                            <div class="social">
+                                <a href="https://www.facebook.com/jerlon.baguio.7/?viewas=100000686899395"><i class='bx bxl-facebook-circle'></i></a>
+                                <a href="https://www.instagram.com/katsuuu1122/"><i class='bx bxl-instagram-alt' ></i></a>
+                                <a href="https://www.tiktok.com/@tingggggg3"><i class='bx bxl-tiktok' ></i></a>
+                                <a href="#"><i class='bx bx-link' ></i></a>
+                            </div>
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">FAQ</a> 
+                                    </li>
+                                    <li>
+                                        <a href="#">Services</a> 
+                                    </li>
+                                    <li>
+                                        <a href="#">About me</a> 
+                                    </li>
+                                    <li>
+                                        <a href="#">Contanct</a> 
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy Policy</a> 
+                                    </li>
+                                </ul>
+                                    <p class="copyright">® 2024 Jerlon | All Rigths Reserved</p>
+                        </footer>
+    </div>
+</body>
+</html>
